@@ -21,12 +21,7 @@ const App = () => {
   console.log("newUserId",newUserId)
 
   const fetchData = async () => {
-    // await fetch("https://jsonplaceholder.typicode.com/users")
-    //   .then((res) => res.json())
-    //   .then((data) => setUsers(data))
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    
     await axios.get("https://jsonplaceholder.typicode.com/users")
       .then((data) => setUsersData(data.data) )
       .catch((err) => {
