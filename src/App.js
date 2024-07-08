@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/AddUser";
-import User from "./components/User";
 import axios from "axios";
 import UserTable from './components/UserTable';
 
@@ -82,17 +81,7 @@ const App = () => {
       <br />
       <AddUser newUserId={newUserId} onAdd={onAdd} onUpdate={onUpdate} editingData={editingData} setEditingData={setEditingData} />
      { usersData?<UserTable usersData={usersData} onDelete={onDelete} onUpdate={onUpdate} setEditingData={setEditingData} />:<p>Lodding...</p>}
-      <div>
-        {/* {users.map((user) => (
-          <User
-            id={user.id}
-            key={user.id}
-            name={user.name}
-            email={user.email}
-            onDelete={onDelete}
-          />
-        ))} */}
-      </div>
+      
     </div>
   );
 };
